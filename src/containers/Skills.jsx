@@ -1,7 +1,7 @@
 const Skills = () => {
 
     return (
-        <p class="flex justify-center p-10">Skills</p>
+        <p className="flex justify-center p-10">Skills</p>
     )
 }
 
