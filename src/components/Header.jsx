@@ -23,9 +23,10 @@ const Header = () => {
       <div className="w-1/12">
         <img src="./public/logo-low-trans-svg.svg" className=""></img>
       </div>
+
       <div className="hidden justify-center md:flex">
         <nav className="">
-          <ul className="flex rounded-full border border-slate-200 p-1 px-3 text-slate-700 shadow-md">
+          <ul className="flex rounded-full border border-slate-200 p-1  px-3 text-slate-700 shadow-md">
             <li>
               <Link
                 to="/"
