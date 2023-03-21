@@ -18,64 +18,61 @@ const Header = () => {
     }
   };
 
-  return (
-    <header className="container mx-auto flex-row border py-8 font-Lato">
-      <div className="w-1/12">
-        <img src="./public/logo-low-trans-svg.svg" className=""></img>
-      </div>
-
-      <div className="hidden justify-center md:flex">
-        <nav className="">
-          <ul className="flex rounded-full border border-slate-200 p-1  px-3 text-slate-700 shadow-md">
-            <li>
-              <Link
-                to="/"
-                className="relative block p-1 px-3 hover:text-emerald-600"
-              >
-                Home
-              </Link>
-            </li>
-            <li>
+  const Navigation = ({ ulClass, liClass, itemClass }) => {
+    return (
+      <ul className={ulClass}>
+        <li className={liClass}>
+          <Link to="/" className={itemClass}>
+            Home
+          </Link>
+        </li>
+        <li className={"hover:cursor-pointer " + itemClass}>Contact</li>
+        {/* <li>
               <Link
                 to="/about"
                 className="relative block p-1 px-3 hover:text-emerald-600"
               >
                 About
               </Link>
-            </li>
-            <li>
-              <Link
-                to="/projects"
-                className="relative block p-1 px-3 hover:text-emerald-600"
-              >
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/tech"
-                className="relative block p-1 px-3 hover:text-emerald-600"
-              >
-                Tech
-              </Link>
-            </li>
-          </ul>
-        </nav>
+            </li> */}
+        <li>
+          <Link to="/projects" className={itemClass}>
+            Projects
+          </Link>
+        </li>
+        <li>
+          <Link to="/tech" className={itemClass}>
+            Tech
+          </Link>
+        </li>
+      </ul>
+    );
+  };
+
+  return (
+    <header className="flex flex-col">
+      <div className="container sticky top-0 mx-auto flex flex-row items-center justify-around py-8 font-Lato">
+        <div className="flex w-1/3 items-center justify-center md:w-1/4">
+          <img src="./public/logo-low-trans-svg.svg" className="w-1/3"></img>
+        </div>
+
+        <div className="hidden w-2/4 items-center justify-center md:flex">
+          <Navigation
+            ulClass="flex items-center rounded-full border border-slate-200 p-1 px-3 text-slate-700 shadow-md"
+            itemClass="relative block p-1 px-3 hover:text-emerald-600"
+          />
+        </div>
+        <div className="flex w-1/4 justify-end p-2 pr-6 md:hidden">
+          <button className="rounded-full p-3" onClick={() => handleNavOpen()}>
+            {navOpen ? <X /> : <Menu />}
+          </button>
+        </div>
       </div>
-      <div className="flex justify-end p-2 pr-6 sm:hidden ">
-        {/* {navOpen ?
-            <button className="" onClick={() => handleNavOpen()}><X /></button>
-        :
-            <button className="" onClick={() => handleNavOpen()}><Menu /></button>
-        } */}
-        <button
-          className="rounded-full border p-3"
-          onClick={() => handleNavOpen()}
-        >
-          {navOpen ? <X /> : <Menu />}
-        </button>
-        <nav></nav>
-      </div>
+      <Navigation
+        ulClass={!navOpen ? "hidden " : "" + "right-0"}
+        liClass="flex"
+        itemClass="justify-self-end"
+      />
     </header>
   );
 };
