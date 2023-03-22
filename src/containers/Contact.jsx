@@ -1,13 +1,13 @@
-const Home = ({ navOpen }) => {
+const Contact = ({ navOpen }) => {
   return (
-    <main
+    <div
       className={`mx-auto flex w-full justify-center ${
         navOpen ? "relative -z-10 blur" : "z-0"
       }`}
     >
-      <p className="flex justify-center p-10">Home</p>
-    </main>
+      <p className="flex justify-center p-10">Contact</p>
+    </div>
   );
 };
 
-export default Home;
+export default Contact;
