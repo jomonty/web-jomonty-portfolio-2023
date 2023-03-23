@@ -26,13 +26,12 @@ const Header = ({ navOpen, handleNavOpen, darkMode, toggleTheme }) => {
         </div>
         <div className="flex items-center justify-end md:flex-1">
           <NavDarkModeToggle darkMode={darkMode} toggleTheme={toggleTheme} />
-          {/* <div className="flex rounded-full border py-2 px-3 shadow">
-            <button>
-              <Sun color="rgb(21 128 61)" />
-            </button>
-          </div> */}
         </div>
-        <NavMobilePopover navOpen={navOpen} handleNavOpen={handleNavOpen} />
+        <NavMobilePopover
+          navOpen={navOpen}
+          handleNavOpen={handleNavOpen}
+          darkMode={darkMode}
+        />
       </div>
     </header>
   );

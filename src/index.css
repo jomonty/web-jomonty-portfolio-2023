@@ -15,7 +15,7 @@
   main,
   footer {
     @apply bg-zinc-50;
-    @apply text-slate-700;
+    @apply text-zinc-600;
     @apply dark:bg-zinc-900;
     @apply dark:text-zinc-200;
   }
