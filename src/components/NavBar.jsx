@@ -8,7 +8,7 @@ const NavBar = () => {
         <li key={index}>
           <Link
             to={link.link}
-            className="relative block p-1 px-5 hover:text-emerald-600"
+            className="relative block p-1 px-5 hover:text-emerald-700 "
           >
             {link.name}
           </Link>
@@ -17,7 +17,7 @@ const NavBar = () => {
     });
 
   return (
-    <ul className="flex items-center rounded-full border border-slate-200 text-slate-700 shadow-md">
+    <ul className="flex items-center rounded-full shadow-lg dark:bg-zinc-800 dark:ring-1 dark:ring-white/10">
       <NavBarLinks />
     </ul>
   );

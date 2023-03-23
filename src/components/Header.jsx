@@ -1,25 +1,23 @@
 import { X, Sun } from "react-feather";
 
 import NavBar from "./NavBar.jsx";
-import NavMobile from "./NavMobile.jsx";
+import NavMobilePopover from "./NavMobilePopover.jsx";
+import NavDarkModeToggle from "./NavDarkModeToggle.jsx";
 
-const Header = ({ navOpen, handleNavOpen }) => {
+const Header = ({ navOpen, handleNavOpen, darkMode, toggleTheme }) => {
   return (
-    <header className="py-6">
+    <header className="top-0 flex-initial py-6">
       <div className="mx-auto flex h-10 w-[85vw] place-content-center gap-4">
         <div className="flex flex-1">
-          <img
-            src="./logo-low-trans-svg.svg"
-            className={`relative pl-5 ${navOpen ? "blur" : ""}`}
-          />
+          <img src="./logo-low-trans-svg.svg" className="pl-5" />
         </div>
         <div className="flex flex-1 justify-end md:justify-center">
           <div className="hidden md:flex ">
             <NavBar />
           </div>
-          <div className="flex rounded-full border py-2 px-3 shadow md:hidden">
+          <div className="flex place-content-center rounded-full shadow dark:bg-zinc-800 dark:ring-1 dark:ring-white/10 md:hidden">
             <button
-              className="flex place-items-center text-slate-700"
+              className="flex place-items-center py-2 px-3 text-sm text-slate-700 dark:text-zinc-200"
               onClick={() => handleNavOpen()}
             >
               Menu
@@ -27,35 +25,14 @@ const Header = ({ navOpen, handleNavOpen }) => {
           </div>
         </div>
         <div className="flex items-center justify-end md:flex-1">
-          <div className="flex rounded-full border py-2 px-3 shadow">
+          <NavDarkModeToggle darkMode={darkMode} toggleTheme={toggleTheme} />
+          {/* <div className="flex rounded-full border py-2 px-3 shadow">
             <button>
               <Sun color="rgb(21 128 61)" />
             </button>
-          </div>
+          </div> */}
         </div>
-        <div>
-          <div
-            className={`fixed inset-0 z-0 bg-zinc-800/40 opacity-100 backdrop-blur-sm ${
-              !navOpen ? " hidden" : ""
-            }`}
-            onClick={() => handleNavOpen()}
-          ></div>
-          <div
-            className={`fixed inset-x-4 top-20 z-10 rounded-3xl bg-white p-5 transition duration-300  ${
-              !navOpen
-                ? " -translate-y-full scale-50 opacity-0"
-                : " translate-y-0 scale-100 opacity-100"
-            }`}
-          >
-            <div className="flex flex-row-reverse items-center justify-between">
-              <button className="-m-1 p-1" onClick={() => handleNavOpen()}>
-                <X color="rgb(82 82 91)" />
-              </button>
-              <h2 className="text-sm font-medium text-zinc-600">Navigation</h2>
-            </div>
-            <NavMobile handleNavOpen={handleNavOpen} />
-          </div>
-        </div>
+        <NavMobilePopover navOpen={navOpen} handleNavOpen={handleNavOpen} />
       </div>
     </header>
   );

@@ -6,4 +6,22 @@
   html {
     font-family: Lato, system-ui, sans-serif;
   }
+  body {
+    @apply bg-white;
+    @apply dark:bg-black;
+  }
+
+  header,
+  main,
+  footer {
+    @apply bg-zinc-50;
+    @apply text-slate-700;
+    @apply dark:bg-zinc-900;
+    @apply dark:text-zinc-200;
+  }
+
+  main {
+    @apply flex-1;
+    @apply: overflow-y-auto;
+  }
 }
