@@ -7,8 +7,8 @@ import NavMobile from "./NavMobile.jsx";
 
 const Header = ({ navOpen, handleNavOpen }) => {
   return (
-    <header className="flex flex-col font-Lato">
-      <div className="my-6 mx-auto flex h-[10vh] w-[85vw] place-content-between md:h-[15vh]">
+    <header className="py-6">
+      <div className="mx-auto flex h-[10vh] w-[85vw] place-content-between md:h-[15vh]">
         <img
           src="./logo-low-trans-svg.svg"
           className={`relative pl-5 ${navOpen ? "blur" : ""}`}
