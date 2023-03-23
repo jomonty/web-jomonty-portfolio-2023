@@ -6,10 +6,10 @@ const NavMobile = ({ handleNavOpen }) => {
   const SideBarNavLinks = () =>
     NavLinks.map((link, index) => {
       return (
-        <li key={index}>
+        <li key={index} className="border-b">
           <Link
             to={link.link}
-            className="relative m-4 block rounded-full p-2 text-center"
+            className="relative block rounded-full py-4 text-center text-zinc-700"
             onClick={() => handleNavOpen()}
           >
             {link.name}
@@ -22,25 +22,25 @@ const NavMobile = ({ handleNavOpen }) => {
     <ul>
       <SideBarNavLinks />
 
-      <li>
-        <div className="relative m-4 flex justify-center rounded-full p-2 text-center">
+      <li className="border-b">
+        <div className="relative flex justify-center rounded-full py-4 text-center">
           <a
             href="https://www.github.com/jomonty"
             target="_blank"
             rel="noreferrer"
           >
-            <GitHub />
+            <GitHub color="rgb(63 63 70)" />
           </a>
         </div>
       </li>
       <li>
-        <div className="relative m-4 flex justify-center rounded-full p-2 text-center">
+        <div className="relative flex justify-center rounded-full py-4 text-center">
           <a
             href="https://www.linkedin.com/in/josh-montgomery-203663111/"
             target="_blank"
             rel="noreferrer"
           >
-            <Linkedin />
+            <Linkedin color="rgb(63 63 70)" />
           </a>
         </div>
       </li>

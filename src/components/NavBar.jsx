@@ -17,7 +17,7 @@ const NavBar = () => {
     });
 
   return (
-    <ul className="flex items-center rounded-full border border-slate-200 p-1 px-3 text-slate-700 shadow-md">
+    <ul className="flex items-center rounded-full border border-slate-200 text-slate-700 shadow-md">
       <NavBarLinks />
     </ul>
   );
