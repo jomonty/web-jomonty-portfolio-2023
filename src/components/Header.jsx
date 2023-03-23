@@ -38,6 +38,7 @@ const Header = ({ navOpen, handleNavOpen }) => {
             className={`fixed inset-0 z-0 bg-zinc-800/40 opacity-100 backdrop-blur-sm ${
               !navOpen ? " hidden" : ""
             }`}
+            onClick={() => handleNavOpen()}
           ></div>
           <div
             className={`fixed inset-x-4 top-20 z-10 rounded-3xl bg-white p-5 transition duration-300  ${
