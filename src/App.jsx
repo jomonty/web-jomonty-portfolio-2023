@@ -9,7 +9,12 @@ import Tech from "./containers/Tech";
 
 function App() {
   const [navOpen, setNavOpen] = useState();
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(
+    // localStorage.getItem("selected-theme") === "dark"
+    localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+  );
 
   const handleNavOpen = () => {
     setNavOpen(!navOpen);
