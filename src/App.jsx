@@ -10,7 +10,6 @@ import Tech from "./containers/Tech";
 function App() {
   const [navOpen, setNavOpen] = useState();
   const [darkMode, setDarkMode] = useState(
-    // localStorage.getItem("selected-theme") === "dark"
     localStorage.theme === "dark" ||
       (!("theme" in localStorage) &&
         window.matchMedia("(prefers-color-scheme: dark)").matches)
@@ -22,11 +21,10 @@ function App() {
 
   const toggleTheme = () => {
     setDarkMode(!darkMode);
-    const root = window.document.documentElement; //add 'dark class to html root element'
+    const root = window.document.documentElement;
     root.classList.toggle("dark");
   };
 
-  // closes mobile navbar when resizing back to desktop size
   window.onresize = function () {
     var w = window.outerWidth;
     if (w > 768) {
