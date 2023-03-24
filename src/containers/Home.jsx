@@ -1,58 +1,28 @@
+import ContactLinks from "../components/ContactLinks.jsx";
+
 const Home = ({ navOpen }) => {
+  const HomeContactLinks = () =>
+    ContactLinks.map((link, index) => {
+      return (
+        <li key={`c-${index}`} className="pr-2">
+          {link}
+        </li>
+      );
+    });
   return (
-    <main className="mx-auto flex w-full justify-center">
-      <p className="flex justify-center p-10">
-        Hi! My name is Josh, and I'm a Glasgow based software developer. After
-        working in Utilities for several years, I came to the realization that I
-        enjoyed using the tools I was using to do my job more than my regular
-        work and this built an ambition to transfer into software development. I
-        began to teach myself through self-guided study, online courses, and
-        building some personal projects. The more time I spent studying the more
-        I became convinced that this was the career for me. In late 2022 I made
-        the decision to enrol at CodeClan Glasgow, for a 4-month intensive
-        course in professional software development. It's been an incredible
-        experince, it's built my knowledge, confidence and I've massively
-        enjoyed it. I'm now actively looking for employment, if you'd like to
-        get in touch please drop me a message on LinkedIn or send an email, I'm
-        always available for a chat. Hi! My name is Josh, and I'm a Glasgow
-        based software developer. After working in Utilities for several years,
-        I came to the realization that I enjoyed using the tools I was using to
-        do my job more than my regular work and this built an ambition to
-        transfer into software development. I began to teach myself through
-        self-guided study, online courses, and building some personal projects.
-        The more time I spent studying the more I became convinced that this was
-        the career for me. In late 2022 I made the decision to enrol at CodeClan
-        Glasgow, for a 4-month intensive course in professional software
-        development. It's been an incredible experince, it's built my knowledge,
-        confidence and I've massively enjoyed it. I'm now actively looking for
-        employment, if you'd like to get in touch please drop me a message on
-        LinkedIn or send an email, I'm always available for a chat. Hi! My name
-        is Josh, and I'm a Glasgow based software developer. After working in
-        Utilities for several years, I came to the realization that I enjoyed
-        using the tools I was using to do my job more than my regular work and
-        this built an ambition to transfer into software development. I began to
-        teach myself through self-guided study, online courses, and building
-        some personal projects. The more time I spent studying the more I became
-        convinced that this was the career for me. In late 2022 I made the
-        decision to enrol at CodeClan Glasgow, for a 4-month intensive course in
-        professional software development. It's been an incredible experince,
-        it's built my knowledge, confidence and I've massively enjoyed it. I'm
-        now actively looking for employment, if you'd like to get in touch
-        please drop me a message on LinkedIn or send an email, I'm always
-        available for a chat. Hi! My name is Josh, and I'm a Glasgow based
-        software developer. After working in Utilities for several years, I came
-        to the realization that I enjoyed using the tools I was using to do my
-        job more than my regular work and this built an ambition to transfer
-        into software development. I began to teach myself through self-guided
-        study, online courses, and building some personal projects. The more
-        time I spent studying the more I became convinced that this was the
-        career for me. In late 2022 I made the decision to enrol at CodeClan
-        Glasgow, for a 4-month intensive course in professional software
-        development. It's been an incredible experince, it's built my knowledge,
-        confidence and I've massively enjoyed it. I'm now actively looking for
-        employment, if you'd like to get in touch please drop me a message on
-        LinkedIn or send an email, I'm always available for a chat.
-      </p>
+    <main className="">
+      <div className="container relative mx-auto w-[85vw] sm:px-8 lg:px-12">
+        <h1 className="min-w-sm text-3xl font-extrabold sm:text-5xl md:w-[40vw] md:min-w-md">
+          Software developer, analyst, lifelong learner.
+        </h1>
+        <p className="min-w-sm pt-8 text-base md:w-[40vw] md:min-w-md">
+          I'm Josh, a full-stack software developer based in Glasgow.
+          Experienced analyst, curious thinker, committed to cool tech.
+        </p>
+        <ul className="flex flex-row gap-4 pt-8 pb-8">
+          <HomeContactLinks />
+        </ul>
+      </div>
     </main>
   );
 };

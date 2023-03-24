@@ -135,6 +135,8 @@ module.exports = {
     },
     caretColor: ({ theme }) => theme("colors"),
     colors: ({ colors }) => ({
+      logoprimary: "rgb(var(--color-logoprimaryrgb) / <alpha-value>)",
+      logosecondary: "var(--color-logosecondary)",
       inherit: colors.inherit,
       current: colors.current,
       transparent: colors.transparent,
@@ -646,6 +648,8 @@ module.exports = {
       min: "min-content",
       max: "max-content",
       fit: "fit-content",
+      sm: "16rem",
+      md: "28rem",
     },
     objectPosition: {
       bottom: "bottom",

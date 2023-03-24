@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-logoprimary: #3d9970;
+    --color-logosecondary: #528265;
+    --color-logoprimaryrgb: 61 153 112;
+    --color-logosecondaryrgb: 82 130 101;
+  }
   html {
     font-family: Lato, system-ui, sans-serif;
   }

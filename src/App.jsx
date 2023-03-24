@@ -36,7 +36,7 @@ function App() {
 
   return (
     <Router>
-      <div className="container mx-auto flex h-screen flex-col">
+      <div className="container mx-auto flex w-full flex-col ring-1 ring-zinc-100 dark:ring-zinc-300/20">
         <Header
           navOpen={navOpen}
           handleNavOpen={handleNavOpen}

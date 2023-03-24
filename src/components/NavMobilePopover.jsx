@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { X, GitHub, Linkedin } from "react-feather";
+import { X } from "react-feather";
 import NavLinks from "../constants/NavLinks.js";
+import ContactLinks from "./ContactLinks.jsx";
 
 const NavMobilePopover = ({ navOpen, handleNavOpen, darkMode }) => {
   const PopoverNavLinks = () =>
@@ -18,43 +19,25 @@ const NavMobilePopover = ({ navOpen, handleNavOpen, darkMode }) => {
       );
     });
 
-  const PopoverContactLinks = () => {
-    return [
-      <li className="py-1" key="c-1">
-        <a
-          href="https://www.github.com/jomonty"
-          target="_blank"
-          rel="noreferrer"
-          className="flex justify-center py-3"
-          onClick={() => handleNavOpen()}
-        >
-          <GitHub color="rgb(21 128 61)" />
-        </a>
-      </li>,
-      <li className="py-1" key="c-2">
-        <a
-          href="https://www.linkedin.com/in/josh-montgomery-203663111/"
-          target="_blank"
-          rel="noreferrer"
-          className="flex justify-center py-3"
-          onClick={() => handleNavOpen()}
-        >
-          <Linkedin color="rgb(21 128 61)" />
-        </a>
-      </li>,
-    ];
-  };
+  const PopoverContactLinks = () =>
+    ContactLinks.map((link, index) => {
+      return (
+        <li key={`c-${index}`} className="py-1" onClick={() => handleNavOpen()}>
+          {link}
+        </li>
+      );
+    });
 
   return (
     <div>
       <div
-        className={`fixed inset-0 z-0 bg-zinc-800/40 opacity-100 backdrop-blur-sm ${
+        className={`fixed inset-0 z-10 bg-zinc-800/40 opacity-100 backdrop-blur-sm ${
           !navOpen ? " hidden" : ""
         }`}
         onClick={() => handleNavOpen()}
       ></div>
       <div
-        className={`fixed inset-x-4 top-20 z-10 rounded-3xl  bg-white p-5 transition duration-300 dark:bg-zinc-800 dark:ring-1 dark:ring-white/10 ${
+        className={`fixed inset-x-4 top-20 z-20 rounded-3xl  bg-white p-5 transition duration-300 dark:bg-zinc-800 dark:ring-1 dark:ring-white/10 ${
           !navOpen
             ? " -translate-y-full scale-50 opacity-0"
             : " translate-y-0 scale-100 opacity-100"

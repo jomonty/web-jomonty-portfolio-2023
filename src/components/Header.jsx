@@ -1,17 +1,25 @@
-import { X, Sun } from "react-feather";
+import { useLocation } from "react-router-dom";
 
 import NavBar from "./NavBar.jsx";
 import NavMobilePopover from "./NavMobilePopover.jsx";
 import NavDarkModeToggle from "./NavDarkModeToggle.jsx";
 
 const Header = ({ navOpen, handleNavOpen, darkMode, toggleTheme }) => {
+  const location = useLocation();
   return (
     <header className="top-0 flex-initial py-6">
-      <div className="mx-auto flex h-10 w-[85vw] place-content-center gap-4">
-        <div className="flex flex-1">
-          <img src="./logo-low-trans-svg.svg" className="pl-5" />
+      <div className="mx-auto flex h-32 w-[85vw] place-content-center gap-4 sm:px-8 md:h-40 lg:px-12">
+        <div
+          className={`relative flex h-full flex-1 ${
+            location.pathname == "/" ? "items-end" : ""
+          }`}
+        >
+          <img
+            src="./logo-low-trans-svg.svg"
+            className={`${location.pathname === "/" ? "h-16" : "h-10"}`}
+          />
         </div>
-        <div className="flex flex-1 justify-end md:justify-center">
+        <div className="flex h-10 flex-1 justify-end md:justify-center">
           <div className="hidden md:flex ">
             <NavBar />
           </div>
@@ -24,7 +32,7 @@ const Header = ({ navOpen, handleNavOpen, darkMode, toggleTheme }) => {
             </button>
           </div>
         </div>
-        <div className="flex items-center justify-end md:flex-1">
+        <div className="flex h-10 items-center justify-end md:flex-1">
           <NavDarkModeToggle darkMode={darkMode} toggleTheme={toggleTheme} />
         </div>
         <NavMobilePopover
