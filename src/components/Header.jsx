@@ -15,7 +15,7 @@ const Header = ({ navOpen, handleNavOpen, darkMode, toggleTheme }) => {
           }`}
         >
           <img
-            src="./logo-low-trans-svg.svg"
+            src="/logo-low-trans-svg.svg"
             className={`${location.pathname === "/" ? "h-16" : "h-10"}`}
           />
         </div>
