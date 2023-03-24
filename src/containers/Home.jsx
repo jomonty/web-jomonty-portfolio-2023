@@ -25,7 +25,12 @@ const Home = ({ navOpen }) => {
           key={index}
           className="relative aspect-square w-44 flex-none overflow-hidden rounded-xl object-cover sm:w-72 sm:rounded-2xl"
         >
-          <img src={source} className="h-full w-full" />
+          <img
+            src={source}
+            className={`h-full w-full ${
+              index % 2 === 0 ? "rotate-1" : "-rotate-1"
+            }`}
+          />
         </div>
       );
     });
