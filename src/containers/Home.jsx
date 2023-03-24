@@ -17,7 +17,7 @@ const Home = ({ navOpen }) => {
         </h1>
         <p className="min-w-sm pt-8 text-base md:w-[40vw] md:min-w-md">
           I'm Josh, a full-stack software developer based in Glasgow.
-          Experienced analyst, curious thinker, committed to cool tech.
+          Experienced analyst, curious by nature, committed to cool tech.
         </p>
         <ul className="flex flex-row gap-4 pt-8 pb-8">
           <HomeContactLinks />
