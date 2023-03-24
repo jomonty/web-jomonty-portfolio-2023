@@ -4,8 +4,8 @@ const NavLinks = [
     link: "/",
   },
   {
-    name: "Contact",
-    link: "/contact",
+    name: "About",
+    link: "/about",
   },
   {
     name: "Projects",

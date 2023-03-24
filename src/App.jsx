@@ -3,7 +3,7 @@ import { useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./containers/Home";
-import Contact from "./containers/Contact";
+import About from "./containers/About";
 import Projects from "./containers/Projects";
 import Tech from "./containers/Tech";
 
@@ -45,7 +45,7 @@ function App() {
         />
         <Routes>
           <Route path="/" element={<Home navOpen={navOpen} />} />
-          <Route path="/contact" element={<Contact navOpen={navOpen} />} />
+          <Route path="/about" element={<About navOpen={navOpen} />} />
           <Route path="/projects" element={<Projects navOpen={navOpen} />} />
           <Route path="/tech" element={<Tech navOpen={navOpen} />} />
         </Routes>
