@@ -4,6 +4,11 @@ module.exports = {
   presets: [],
   darkMode: "class", // or 'class'
   theme: {
+    extend: {
+      fontFamily: {
+        Lato: ["lato"],
+      }
+    },
     accentColor: ({ theme }) => ({
       ...theme("colors"),
       auto: "auto",
@@ -306,7 +311,6 @@ module.exports = {
       DEFAULT: "1",
     },
     fontFamily: {
-      Lato: ["sans-serif"],
       sans: [
         "ui-sans-serif",
         "system-ui",

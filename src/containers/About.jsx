@@ -29,7 +29,7 @@ const About = ({ navOpen, handleNavOpen }) => {
   const AboutContentText = () =>
     AboutContent.text.map((paragraph, index) => {
       return (
-        <p key={index} className="pt-8 text-base">
+        <p key={index} className="pt-8 text-base tracking-wider">
           {paragraph}
         </p>
       );
@@ -50,9 +50,8 @@ const About = ({ navOpen, handleNavOpen }) => {
                   </div>
                 </div>
                 <div className="lg:order-first lg:row-span-2">
-                  <h1 className="text-4xl font-black tracking-tight sm:text-5xl">
-                    I'm Josh Montgomery, full-stack software developer in
-                    Glasgow.
+                  <h1 className="text-3xl font-extrabold sm:text-4xl md:text-5xl">
+                    {AboutContent.title}
                   </h1>
                   <AboutContentText />
                 </div>

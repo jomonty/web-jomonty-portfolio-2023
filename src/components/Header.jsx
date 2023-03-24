@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import NavBar from "./NavBar.jsx";
 import NavMobilePopover from "./NavMobilePopover.jsx";
@@ -17,13 +17,15 @@ const Header = ({ navOpen, handleNavOpen, darkMode, toggleTheme }) => {
           >
             <div
               className={`relative flex h-full flex-1 ${
-                location.pathname == "/" ? "items-end" : ""
+                location.pathname == "/" ? "items-end" : "items-start"
               }`}
             >
-              <img
-                src="/logo-low-trans-svg.svg"
-                className={`${location.pathname === "/" ? "h-16" : "h-10"}`}
-              />
+              <Link to="/">
+                <img
+                  src="/logo-low-trans-svg.svg"
+                  className={`${location.pathname === "/" ? "h-16" : "h-10"}`}
+                />
+              </Link>
             </div>
             <div className="flex h-10 flex-1 justify-end md:justify-center">
               <div className="hidden md:flex ">

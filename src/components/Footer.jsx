@@ -17,7 +17,7 @@ const Footer = () => {
     });
 
   return (
-    <footer className="mt-20">
+    <footer className="mt-24">
       <div className="sm:px-8">
         <div className="mx-auto max-w-7xl lg:px-8">
           <div className="border-t border-zinc-100 pt-8 pb-12 dark:border-zinc-700/60">
@@ -25,7 +25,7 @@ const Footer = () => {
               <ul className="flex justify-around py-3 md:w-[25vw] ">
                 <FooterNavLinks />
               </ul>
-              <h4 className="py-3">&copy; Josh Montgomery 2023</h4>
+              <h4 className="pt-6 pb-3">&copy; Josh Montgomery 2023</h4>
             </div>
           </div>
         </div>
