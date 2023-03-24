@@ -13,16 +13,19 @@
     font-family: Lato, system-ui, sans-serif;
   }
   body {
-    @apply bg-white;
+    @apply bg-zinc-50;
     @apply dark:bg-black;
+    @apply flex;
+    @apply h-full;
+    @apply flex-col;
   }
 
   header,
   main,
   footer {
-    @apply bg-zinc-50;
+    /* @apply bg-white; */
     @apply text-zinc-600;
-    @apply dark:bg-zinc-900;
+    /* @apply dark:bg-zinc-900; */
     @apply dark:text-zinc-200;
   }
 

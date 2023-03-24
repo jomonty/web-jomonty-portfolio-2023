@@ -17,11 +17,19 @@ const Footer = () => {
     });
 
   return (
-    <footer className="bottom-0 flex flex-initial flex-col place-items-center border-t border-zinc-100 py-6 dark:border-zinc-700/40">
-      <ul className="flex justify-around py-3 md:w-[25vw] ">
-        <FooterNavLinks />
-      </ul>
-      <h4 className="py-3">&copy; Josh Montgomery 2023</h4>
+    <footer className="mt-20">
+      <div className="sm:px-8">
+        <div className="mx-auto max-w-7xl lg:px-8">
+          <div className="border-t border-zinc-100 pt-8 pb-12 dark:border-zinc-700/60">
+            <div className="relative flex flex-col place-items-center px-4 sm:px-8 lg:px-12">
+              <ul className="flex justify-around py-3 md:w-[25vw] ">
+                <FooterNavLinks />
+              </ul>
+              <h4 className="py-3">&copy; Josh Montgomery 2023</h4>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
   );
 };

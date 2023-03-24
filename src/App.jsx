@@ -34,21 +34,24 @@ function App() {
 
   return (
     <Router>
-      <div className="container mx-auto flex w-full flex-col ring-1 ring-zinc-100 dark:ring-zinc-300/20">
-        <Header
-          navOpen={navOpen}
-          handleNavOpen={handleNavOpen}
-          darkMode={darkMode}
-          toggleTheme={toggleTheme}
-        />
-        <Routes>
-          <Route path="/" element={<Home navOpen={navOpen} />} />
-          <Route path="/about" element={<About navOpen={navOpen} />} />
-          <Route path="/projects" element={<Projects navOpen={navOpen} />} />
-          <Route path="/tech" element={<Tech navOpen={navOpen} />} />
-        </Routes>
-        <Footer />
+      <div className="fixed inset-0 -z-10 flex justify-center sm:px-8">
+        <div className="flex w-full max-w-7xl lg:px-8">
+          <div className="w-full bg-white ring-zinc-100 dark:bg-zinc-900  dark:ring-zinc-300/20"></div>
+        </div>
       </div>
+      <Header
+        navOpen={navOpen}
+        handleNavOpen={handleNavOpen}
+        darkMode={darkMode}
+        toggleTheme={toggleTheme}
+      />
+      <Routes>
+        <Route path="/" element={<Home navOpen={navOpen} />} />
+        <Route path="/about" element={<About navOpen={navOpen} />} />
+        <Route path="/projects" element={<Projects navOpen={navOpen} />} />
+        <Route path="/tech" element={<Tech navOpen={navOpen} />} />
+      </Routes>
+      <Footer />
     </Router>
   );
 }

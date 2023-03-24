@@ -7,8 +7,12 @@ import NavDarkModeToggle from "./NavDarkModeToggle.jsx";
 const Header = ({ navOpen, handleNavOpen, darkMode, toggleTheme }) => {
   const location = useLocation();
   return (
-    <header className="top-0 flex-initial py-6">
-      <div className="mx-auto flex h-32 w-[85vw] place-content-center gap-4 sm:px-8 md:h-40 lg:px-12">
+    <header className="py-6">
+      <div
+        className={`mx-auto flex w-[85vw] place-content-center gap-4 sm:px-8 md:h-40 lg:px-12 ${
+          location.pathname === "/" ? "h-32 md:h-40" : "h-20 md:h-28"
+        }`}
+      >
         <div
           className={`relative flex h-full flex-1 ${
             location.pathname == "/" ? "items-end" : ""
