@@ -47,7 +47,10 @@ function App() {
       />
       <Routes>
         <Route path="/" element={<Home navOpen={navOpen} />} />
-        <Route path="/about" element={<About navOpen={navOpen} />} />
+        <Route
+          path="/about"
+          element={<About navOpen={navOpen} handleNavOpen={handleNavOpen} />}
+        />
         <Route path="/projects" element={<Projects navOpen={navOpen} />} />
         <Route path="/tech" element={<Tech navOpen={navOpen} />} />
       </Routes>

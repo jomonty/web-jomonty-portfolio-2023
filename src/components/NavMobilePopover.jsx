@@ -23,7 +23,7 @@ const NavMobilePopover = ({ navOpen, handleNavOpen, darkMode }) => {
     ContactLinks.map((link, index) => {
       return (
         <li key={`c-${index}`} className="py-1" onClick={() => handleNavOpen()}>
-          {link}
+          {link.html}
         </li>
       );
     });
