@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@types/react': ^18.0.28
   '@types/react-dom': ^18.0.11
+  '@vercel/analytics': ^0.1.11
   '@vitejs/plugin-react': ^3.1.0
   autoprefixer: ^10.4.14
   postcss: ^8.4.21
@@ -16,6 +17,7 @@ specifiers:
   vite: ^4.2.1
 
 dependencies:
+  '@vercel/analytics': 0.1.11_react@18.2.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-feather: 2.0.10_react@18.2.0
@@ -545,6 +547,14 @@ packages:
   /@types/scheduler/0.16.2:
     resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
     dev: true
+
+  /@vercel/analytics/0.1.11_react@18.2.0:
+    resolution: {integrity: sha512-mj5CPR02y0BRs1tN3oZcBNAX9a8NxsIUl9vElDPcqxnMfP0RbRc9fI9Ud7+QDg/1Izvt5uMumsr+6YsmVHcyuw==}
+    peerDependencies:
+      react: ^16.8||^17||^18
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /@vitejs/plugin-react/3.1.0_vite@4.2.1:
     resolution: {integrity: sha512-AfgcRL8ZBhAlc3BFdigClmTUMISmmzHn7sB2h9U1odvc5U/MjWXsAaz18b/WoppUTDBzxOJwo2VdClfUcItu9g==}
