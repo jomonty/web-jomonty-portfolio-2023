@@ -31,13 +31,13 @@ const NavMobilePopover = ({ navOpen, handleNavOpen, darkMode }) => {
   return (
     <div>
       <div
-        className={`fixed inset-0 z-10 bg-zinc-800/40 opacity-100 backdrop-blur-sm ${
+        className={`fixed inset-0 z-20 bg-zinc-800/40 opacity-100 backdrop-blur-sm ${
           !navOpen ? " hidden" : ""
         }`}
         onClick={() => handleNavOpen()}
       ></div>
       <div
-        className={`fixed inset-x-4 top-20 z-20 rounded-3xl  bg-white p-5 transition duration-300 dark:bg-zinc-800 dark:ring-1 dark:ring-white/10 ${
+        className={`fixed inset-x-4 top-20 z-30 rounded-3xl  bg-white p-5 transition duration-300 dark:bg-zinc-800 dark:ring-1 dark:ring-white/10 ${
           !navOpen
             ? " -translate-y-full scale-50 opacity-0"
             : " translate-y-0 scale-100 opacity-100"
