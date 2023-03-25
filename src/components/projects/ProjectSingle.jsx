@@ -1,4 +1,4 @@
-import TechIconList from "../constants/TechIconList";
+import TechIconList from "./TechIconList";
 
 const ProjectSingle = ({ project }) => {
   const paragraphNodes = project.description.map((paragraph, index) => {
