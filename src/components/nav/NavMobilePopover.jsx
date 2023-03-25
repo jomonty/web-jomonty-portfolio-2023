@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { X } from "react-feather";
-import NavLinks from "../constants/NavLinks.js";
-import ContactLinks from "./ContactLinks.jsx";
+import NavLinks from "../../constants/NavLinks.js";
+import ContactLinks from "../ContactLinks.jsx";
 
 const NavMobilePopover = ({ navPopoverOpen, closePopoverNav, darkMode }) => {
   const PopoverNavLinks = () =>
@@ -35,13 +35,13 @@ const NavMobilePopover = ({ navPopoverOpen, closePopoverNav, darkMode }) => {
   return (
     <div>
       <div
-        className={`fixed inset-0 z-20 bg-zinc-800/40 opacity-100 backdrop-blur-sm ${
+        className={`fixed inset-0 z-30 bg-zinc-800/40 opacity-100 backdrop-blur-sm ${
           !navPopoverOpen ? " hidden" : ""
         }`}
         onClick={() => closePopoverNav()}
       ></div>
       <div
-        className={`fixed inset-x-4 top-20 z-30 rounded-3xl  bg-white p-5 transition duration-300 dark:bg-zinc-800 dark:ring-1 dark:ring-white/10 ${
+        className={`fixed inset-x-4 top-20 z-40 rounded-3xl  bg-white p-5 transition duration-300 dark:bg-zinc-800 dark:ring-1 dark:ring-white/10 ${
           !navPopoverOpen
             ? " -translate-y-full scale-50 opacity-0"
             : " translate-y-0 scale-100 opacity-100"

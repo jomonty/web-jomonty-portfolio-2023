@@ -36,7 +36,7 @@ function App() {
   window.onresize = function () {
     var w = window.outerWidth;
     if (w > 768) {
-      setNavOpen(false);
+      closePopoverNav();
     }
   };
 

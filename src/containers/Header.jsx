@@ -1,8 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 
-import NavBar from "../components/NavBar.jsx";
-import NavMobilePopover from "../components/NavMobilePopover.jsx";
-import NavDarkModeToggle from "../components/NavDarkModeToggle.jsx";
+import NavBar from "../components/nav/NavBar.jsx";
+import NavMobilePopover from "../components/nav/NavMobilePopover.jsx";
+import NavDarkModeToggle from "../components/nav/NavDarkModeToggle.jsx";
 
 const Header = ({
   navPopoverOpen,
