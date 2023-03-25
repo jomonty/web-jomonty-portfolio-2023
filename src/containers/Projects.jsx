@@ -15,9 +15,9 @@ const Projects = ({ navOpen }) => {
   const handleClick = (id) => {
     setSelectedProjectId(id);
   };
-  useEffect(() => {
-    console.log(selectedProjectId);
-  }, [selectedProjectId]);
+  // useEffect(() => {
+  //   console.log(selectedProjectId);
+  // }, [selectedProjectId]);
 
   const activeProjects = ProjectsContent.projects
     .filter((project) => project.active === true)
