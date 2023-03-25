@@ -1,22 +1,30 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState } from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./containers/Header";
+import Footer from "./containers/Footer";
 import Home from "./containers/Home";
 import About from "./containers/About";
 import Projects from "./containers/Projects";
 import Tech from "./containers/Tech";
 
 function App() {
-  const [navOpen, setNavOpen] = useState();
+  const [navPopoverOpen, setNavPopoverOpen] = useState();
   const [darkMode, setDarkMode] = useState(
     localStorage.theme === "dark" ||
       (!("theme" in localStorage) &&
         window.matchMedia("(prefers-color-scheme: dark)").matches)
   );
 
-  const handleNavOpen = () => {
-    setNavOpen(!navOpen);
+  // const handleNavOpen = () => {
+  //   setNavOpen(!navOpen);
+  // };
+
+  const openPopoverNav = () => {
+    setNavPopoverOpen(true);
+  };
+
+  const closePopoverNav = () => {
+    setNavPopoverOpen(false);
   };
 
   const toggleTheme = () => {
@@ -40,19 +48,17 @@ function App() {
         </div>
       </div>
       <Header
-        navOpen={navOpen}
-        handleNavOpen={handleNavOpen}
+        navPopoverOpen={navPopoverOpen}
+        openPopoverNav={openPopoverNav}
+        closePopoverNav={closePopoverNav}
         darkMode={darkMode}
         toggleTheme={toggleTheme}
       />
       <Routes>
-        <Route path="/" element={<Home navOpen={navOpen} />} />
-        <Route
-          path="/about"
-          element={<About navOpen={navOpen} handleNavOpen={handleNavOpen} />}
-        />
-        <Route path="/projects" element={<Projects navOpen={navOpen} />} />
-        <Route path="/tech" element={<Tech navOpen={navOpen} />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/tech" element={<Tech />} />
       </Routes>
       <Footer />
     </Router>

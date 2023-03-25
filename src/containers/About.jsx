@@ -1,7 +1,7 @@
 import AboutContent from "../constants/AboutContent.js";
 import ContactLinks from "../components/ContactLinks.jsx";
 
-const About = ({ navOpen, handleNavOpen }) => {
+const About = () => {
   const AboutContactLinks = () =>
     ContactLinks.map((link, index) => {
       return (
@@ -14,9 +14,9 @@ const About = ({ navOpen, handleNavOpen }) => {
             target="_blank"
             rel="noreferrer"
             className="flex justify-start py-3 hover:text-logoprimary"
-            onClick={() => {
-              handleNavOpen();
-            }}
+            // onClick={() => {
+            //   closePopoverNav();
+            // }}
           >
             <span className="flex  gap-8">
               {link.svg}

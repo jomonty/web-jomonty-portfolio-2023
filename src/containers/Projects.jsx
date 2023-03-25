@@ -4,7 +4,7 @@ import { GitHub } from "react-feather";
 import ProjectsContent from "../constants/ProjectsContent.jsx";
 // import ProjectSingle from "../components/ProjectSingle";
 
-const Projects = ({ navOpen }) => {
+const Projects = () => {
   const [selectedProjectId, setSelectedProjectId] = useState(
     ProjectsContent.projects[0].id
   );

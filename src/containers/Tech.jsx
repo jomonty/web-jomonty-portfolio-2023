@@ -1,4 +1,4 @@
-const Tech = ({ navOpen }) => {
+const Tech = () => {
   return (
     <main>
       <div className="mt-6 sm:px-8">

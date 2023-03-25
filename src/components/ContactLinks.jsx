@@ -8,7 +8,6 @@ const ContactLinks = [
         target="_blank"
         rel="noreferrer"
         className="flex justify-center py-3"
-        onClick={() => handleNavOpen()}
       >
         <GitHub color="var(--color-logoprimary)" />
       </a>
@@ -24,7 +23,6 @@ const ContactLinks = [
         target="_blank"
         rel="noreferrer"
         className="flex justify-center py-3"
-        onClick={() => handleNavOpen()}
       >
         <Linkedin color="var(--color-logoprimary" />
       </a>

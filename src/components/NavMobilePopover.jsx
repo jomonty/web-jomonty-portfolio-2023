@@ -3,7 +3,7 @@ import { X } from "react-feather";
 import NavLinks from "../constants/NavLinks.js";
 import ContactLinks from "./ContactLinks.jsx";
 
-const NavMobilePopover = ({ navOpen, handleNavOpen, darkMode }) => {
+const NavMobilePopover = ({ navPopoverOpen, closePopoverNav, darkMode }) => {
   const PopoverNavLinks = () =>
     NavLinks.map((link, index) => {
       return (
@@ -11,7 +11,7 @@ const NavMobilePopover = ({ navOpen, handleNavOpen, darkMode }) => {
           <Link
             to={link.link}
             className="relative block rounded-full py-3 text-center "
-            onClick={() => handleNavOpen()}
+            onClick={() => closePopoverNav()}
           >
             {link.name}
           </Link>
@@ -22,7 +22,11 @@ const NavMobilePopover = ({ navOpen, handleNavOpen, darkMode }) => {
   const PopoverContactLinks = () =>
     ContactLinks.map((link, index) => {
       return (
-        <li key={`c-${index}`} className="py-1" onClick={() => handleNavOpen()}>
+        <li
+          key={`c-${index}`}
+          className="py-1"
+          onClick={() => closePopoverNav()}
+        >
           {link.html}
         </li>
       );
@@ -32,13 +36,13 @@ const NavMobilePopover = ({ navOpen, handleNavOpen, darkMode }) => {
     <div>
       <div
         className={`fixed inset-0 z-20 bg-zinc-800/40 opacity-100 backdrop-blur-sm ${
-          !navOpen ? " hidden" : ""
+          !navPopoverOpen ? " hidden" : ""
         }`}
-        onClick={() => handleNavOpen()}
+        onClick={() => closePopoverNav()}
       ></div>
       <div
         className={`fixed inset-x-4 top-20 z-30 rounded-3xl  bg-white p-5 transition duration-300 dark:bg-zinc-800 dark:ring-1 dark:ring-white/10 ${
-          !navOpen
+          !navPopoverOpen
             ? " -translate-y-full scale-50 opacity-0"
             : " translate-y-0 scale-100 opacity-100"
         }`}
@@ -47,7 +51,7 @@ const NavMobilePopover = ({ navOpen, handleNavOpen, darkMode }) => {
           <h2 className="dark: text-sm font-medium text-zinc-600 dark:text-zinc-400">
             Navigation
           </h2>
-          <button className="-m-1 p-1" onClick={() => handleNavOpen()}>
+          <button className="-m-1 p-1" onClick={() => closePopoverNav()}>
             <X color={darkMode ? "rgb(161 161 170" : "rgb(82 82 91)"} />
           </button>
         </div>

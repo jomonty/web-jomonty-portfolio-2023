@@ -1,10 +1,16 @@
 import { Link, useLocation } from "react-router-dom";
 
-import NavBar from "./NavBar.jsx";
-import NavMobilePopover from "./NavMobilePopover.jsx";
-import NavDarkModeToggle from "./NavDarkModeToggle.jsx";
+import NavBar from "../components/NavBar.jsx";
+import NavMobilePopover from "../components/NavMobilePopover.jsx";
+import NavDarkModeToggle from "../components/NavDarkModeToggle.jsx";
 
-const Header = ({ navOpen, handleNavOpen, darkMode, toggleTheme }) => {
+const Header = ({
+  navPopoverOpen,
+  openPopoverNav,
+  closePopoverNav,
+  darkMode,
+  toggleTheme,
+}) => {
   const location = useLocation();
   return (
     <header className="pt-6">
@@ -34,7 +40,7 @@ const Header = ({ navOpen, handleNavOpen, darkMode, toggleTheme }) => {
               <div className="flex place-content-center rounded-full shadow dark:bg-zinc-800 dark:ring-1 dark:ring-white/10 md:hidden">
                 <button
                   className="flex place-items-center py-2 px-3 text-sm text-slate-700 dark:text-zinc-200"
-                  onClick={() => handleNavOpen()}
+                  onClick={() => openPopoverNav()}
                 >
                   Menu
                 </button>
@@ -47,8 +53,8 @@ const Header = ({ navOpen, handleNavOpen, darkMode, toggleTheme }) => {
               />
             </div>
             <NavMobilePopover
-              navOpen={navOpen}
-              handleNavOpen={handleNavOpen}
+              navPopoverOpen={navPopoverOpen}
+              closePopoverNav={closePopoverNav}
               darkMode={darkMode}
             />
           </div>

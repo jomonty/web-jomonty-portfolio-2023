@@ -1,7 +1,7 @@
 import ContactLinks from "../components/ContactLinks.jsx";
 import HomeContent from "../constants/HomeContent.js";
 
-const Home = ({ navOpen }) => {
+const Home = () => {
   const HomeContactLinks = () =>
     ContactLinks.map((link, index) => {
       return (
