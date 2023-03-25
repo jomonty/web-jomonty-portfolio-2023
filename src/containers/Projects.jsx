@@ -62,7 +62,7 @@ const Projects = () => {
       <div className="mt-6 sm:px-8">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="relative sm:px-8 lg:px-12">
-            <div className="mx-auto max-w-2xl lg:max-w-5xl">
+            <div className="">
               {/* <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12"> */}
               <div className="">
                 <h1 className="text-3xl font-extrabold sm:text-4xl md:text-5xl">
