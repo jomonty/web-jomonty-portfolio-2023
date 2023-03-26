@@ -41,7 +41,7 @@ const Home = () => {
   const HomeContentText = () =>
     HomeContent.text.map((paragraph, index) => {
       return (
-        <p key={index} className="min-w-sm pt-8 text-base md:min-w-md">
+        <p key={index} className="pt-8 text-base">
           {paragraph}
         </p>
       );
@@ -49,9 +49,6 @@ const Home = () => {
 
   return (
     <main className="">
-      {/* <div className="mt-6 sm:px-8"> */}
-      {/* <div className="mx-auto max-w-7xl lg:px-8"> */}
-      {/* <div className="relative px-4 sm:px-8 lg:px-12"> */}
       <ContentWrapper>
         <div className="mt-6 max-w-2xl">
           <h1 className="text-3xl font-extrabold sm:text-5xl">
@@ -63,9 +60,6 @@ const Home = () => {
           </ul>
         </div>
       </ContentWrapper>
-      {/* </div> */}
-      {/* </div> */}
-      {/* </div> */}
 
       <div className="mt-8 overflow-hidden sm:mt-12">
         <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4">

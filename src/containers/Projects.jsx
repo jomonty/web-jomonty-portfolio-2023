@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { GitHub } from "react-feather";
 
+import ContentWrapper from "./ContentWrapper.jsx";
 import ProjectsContent from "../constants/ProjectsContent.jsx";
 // import ProjectSingle from "../components/ProjectSingle";
 
@@ -23,15 +23,18 @@ const Projects = () => {
     .filter((project) => project.active === true)
     .map((project, index) => {
       return (
-        <li key={index} className="group relative flex flex-col items-start">
-          <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-50">
-            <div className="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
+        <li
+          key={index}
+          className="group relative flex flex-col items-start px-5 py-5"
+        >
+          <div className="absolute inset-x-0 inset-y-0 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:rounded-2xl"></div>
+          <h2 className="text-base font-semibold text-zinc-800 dark:text-zinc-50">
             <a
               href={project.url ? project.url : project.github}
               target="_blank"
               rel="noreferrer"
             >
-              <span className="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
+              <span className="absolute inset-y-0 inset-x-0 z-20 sm:rounded-2xl"></span>
               <span className="relative z-10">{project.name}</span>
             </a>
           </h2>
@@ -59,28 +62,19 @@ const Projects = () => {
 
   return (
     <main>
-      <div className="mt-6 sm:px-8">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="relative sm:px-8 lg:px-12">
-            <div className="">
-              {/* <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12"> */}
-              <div className="">
-                <h1 className="text-3xl font-extrabold sm:text-4xl md:text-5xl">
-                  Stuff I've made in my journey so far.
-                </h1>
-
-                {/* <p className="pt-8 text-base tracking-wider">Coming soon...</p> */}
-              </div>
-              <div className="mt-16 sm:mt-20">
-                <ul className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
-                  {activeProjects}
-                </ul>
-              </div>
-              {/* </div> */}
-            </div>
-          </div>
+      <ContentWrapper>
+        <div className="mt-6 max-w-2xl">
+          <h1 className="text-3xl font-extrabold sm:text-4xl md:text-5xl">
+            Stuff I've made in my journey so far.
+          </h1>
+          {/* <p className="pt-8 text-base tracking-wider">Coming soon...</p> */}
         </div>
-      </div>
+        <div className="mt-16 sm:mt-20">
+          <ul className="grid grid-cols-1 gap-x-2 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+            {activeProjects}
+          </ul>
+        </div>
+      </ContentWrapper>
     </main>
   );
 };

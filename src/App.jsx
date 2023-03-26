@@ -15,10 +15,6 @@ function App() {
         window.matchMedia("(prefers-color-scheme: dark)").matches)
   );
 
-  // const handleNavOpen = () => {
-  //   setNavOpen(!navOpen);
-  // };
-
   const openPopoverNav = () => {
     setNavPopoverOpen(true);
   };

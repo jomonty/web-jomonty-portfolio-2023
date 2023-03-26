@@ -1,3 +1,4 @@
+import ContentWrapper from "./ContentWrapper.jsx";
 import AboutContent from "../constants/AboutContent.js";
 import ContactLinks from "../components/ContactLinks.jsx";
 
@@ -35,36 +36,32 @@ const About = () => {
       );
     });
   return (
-    <main className="">
-      <div className="mt-6 sm:px-8">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="relative sm:px-8 lg:px-12">
-            <div className="">
-              <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
-                <div className="lg:ml-20">
-                  <div className="flex max-w-xs px-2.5 lg:max-w-none">
-                    <img
-                      src="/logo-low-trans-svg.svg"
-                      className="aspect-square rounded-xl object-cover md:rounded-2xl"
-                    />
-                  </div>
-                </div>
-                <div className="lg:order-first lg:row-span-2">
-                  <h1 className="text-3xl font-extrabold sm:text-4xl md:text-5xl">
-                    {AboutContent.title}
-                  </h1>
-                  <AboutContentText />
-                </div>
-                <div className="lg:ml-20">
-                  <ul className="flex flex-col gap-6 border-y border-zinc-100 py-4 dark:border-zinc-100/5">
-                    <AboutContactLinks />
-                  </ul>
-                </div>
+    <main>
+      <ContentWrapper>
+        <div className="mt-6">
+          <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
+            <div className="lg:ml-20">
+              <div className="flex max-w-xs px-2.5 lg:max-w-none">
+                <img
+                  src="/logo-low-trans-svg.svg"
+                  className="aspect-square rounded-xl object-cover md:rounded-2xl"
+                />
               </div>
+            </div>
+            <div className="lg:order-first lg:row-span-2">
+              <h1 className="text-3xl font-extrabold sm:text-4xl md:text-5xl">
+                {AboutContent.title}
+              </h1>
+              <AboutContentText />
+            </div>
+            <div className="lg:ml-20">
+              <ul className="flex flex-col gap-6 border-y border-zinc-100 py-4 dark:border-zinc-100/5">
+                <AboutContactLinks />
+              </ul>
             </div>
           </div>
         </div>
-      </div>
+      </ContentWrapper>
     </main>
   );
 };
