@@ -1,5 +1,6 @@
 import ContactLinks from "../components/ContactLinks.jsx";
 import HomeContent from "../constants/HomeContent.js";
+import ContentWrapper from "./ContentWrapper.jsx";
 
 const Home = () => {
   const HomeContactLinks = () =>
@@ -48,21 +49,23 @@ const Home = () => {
 
   return (
     <main className="">
-      <div className="mt-6 sm:px-8">
-        <div className="mx-auto max-w-7xl lg:px-8">
-          <div className="relative px-4 sm:px-8 lg:px-12">
-            <div className="max-w-2xl">
-              <h1 className="text-3xl font-extrabold sm:text-5xl">
-                {HomeContent.title}
-              </h1>
-              <HomeContentText />
-              <ul className="flex flex-row gap-4 pt-8">
-                <HomeContactLinks />
-              </ul>
-            </div>
-          </div>
+      {/* <div className="mt-6 sm:px-8"> */}
+      {/* <div className="mx-auto max-w-7xl lg:px-8"> */}
+      {/* <div className="relative px-4 sm:px-8 lg:px-12"> */}
+      <ContentWrapper>
+        <div className="mt-6 max-w-2xl">
+          <h1 className="text-3xl font-extrabold sm:text-5xl">
+            {HomeContent.title}
+          </h1>
+          <HomeContentText />
+          <ul className="flex flex-row gap-4 pt-8">
+            <HomeContactLinks />
+          </ul>
         </div>
-      </div>
+      </ContentWrapper>
+      {/* </div> */}
+      {/* </div> */}
+      {/* </div> */}
 
       <div className="mt-8 overflow-hidden sm:mt-12">
         <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4">
