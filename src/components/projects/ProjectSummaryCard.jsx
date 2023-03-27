@@ -33,9 +33,9 @@ const ProjectSummaryCard = ({ project }) => {
       <p className="z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
         {project.short_description}
       </p>
-      <StyledLink link="" displayText="Blog">
+      {/* <StyledLink link="" displayText="Blog">
         <BookOpen size={20} />
-      </StyledLink>
+      </StyledLink> */}
       <StyledLink link={project.github} displayText="GitHub">
         <GitHub size={20} />
       </StyledLink>
