@@ -2,6 +2,9 @@ import ContactLinks from "../components/ContactLinks.jsx";
 import HomeContent from "../constants/HomeContent.js";
 import ContentWrapper from "./ContentWrapper.jsx";
 
+import HomeImages from "../components/home/HomeImages.jsx";
+import HomeWorkHistory from "../components/home/HomeWorkHistory.jsx";
+
 const Home = () => {
   const HomeContactLinks = () =>
     ContactLinks.map((link, index) => {
@@ -11,32 +14,6 @@ const Home = () => {
         </li>
       );
     });
-
-  const HomeImages = () => {
-    const imageSources = [
-      "/sample-home-image-1.jpg",
-      "/sample-home-image-2.jpg",
-      "/sample-home-image-3.jpg",
-      "/sample-home-image-4.jpg",
-      "/sample-home-image-5.jpg",
-    ];
-
-    return imageSources.map((source, index) => {
-      return (
-        <div
-          key={index}
-          className="relative aspect-square w-44 flex-none overflow-hidden rounded-xl object-cover sm:w-72 sm:rounded-2xl"
-        >
-          <img
-            src={source}
-            className={`h-full w-full ${
-              index % 2 === 0 ? "rotate-1" : "-rotate-1"
-            }`}
-          />
-        </div>
-      );
-    });
-  };
 
   const HomeContentText = () =>
     HomeContent.text.map((paragraph, index) => {
@@ -58,6 +35,13 @@ const Home = () => {
           <ul className="flex flex-row gap-4 pt-8">
             <HomeContactLinks />
           </ul>
+        </div>
+      </ContentWrapper>
+      <ContentWrapper>
+        <div className="mt-6">
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            <HomeWorkHistory />
+          </div>
         </div>
       </ContentWrapper>
 
