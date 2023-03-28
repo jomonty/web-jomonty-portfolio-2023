@@ -2,7 +2,9 @@ import Tech from "./Tech";
 
 const Projects = {
   title: "Stuff I've made on my journey so far.",
-  text: ["", ""],
+  text: [
+    "I've made tons of little scripts and projects while I've been learning, as well as some larger projects to learn something specific. The below is a small selection of my better work,  more are available on my GitHub.",
+  ],
   projects: [
     {
       id: 1,

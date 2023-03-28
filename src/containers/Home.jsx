@@ -41,7 +41,7 @@ const Home = () => {
   const HomeContentText = () =>
     HomeContent.text.map((paragraph, index) => {
       return (
-        <p key={index} className="pt-8 text-base">
+        <p key={index} className="pt-8 text-base tracking-wider">
           {paragraph}
         </p>
       );

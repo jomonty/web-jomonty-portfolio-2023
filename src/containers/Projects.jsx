@@ -20,16 +20,26 @@ const Projects = () => {
   //   console.log(selectedProjectId);
   // }, [selectedProjectId]);
 
+  const ProjectsContentText = () =>
+    ProjectsContent.text.map((paragraph, index) => {
+      return (
+        <p key={index} className="pt-8 text-base tracking-wider">
+          {paragraph}
+        </p>
+      );
+    });
+
   return (
     <main>
       <ContentWrapper>
         <div className="mt-6 max-w-2xl">
           <h1 className="text-3xl font-extrabold sm:text-4xl md:text-5xl">
-            Stuff I've made in my journey so far.
+            {ProjectsContent.title}
           </h1>
           {/* <p className="pt-8 text-base tracking-wider">Coming soon...</p> */}
+          <ProjectsContentText />
         </div>
-        <div className="mt-16 sm:mt-20">
+        <div className="mt-10 sm:mt-12">
           <ProjectSummaryGrid projects={ProjectsContent.projects} />
         </div>
       </ContentWrapper>
