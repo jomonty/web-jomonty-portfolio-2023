@@ -37,19 +37,19 @@ const Home = () => {
           </ul>
         </div>
       </ContentWrapper>
-      <ContentWrapper>
-        <div className="mt-6">
-          <div className="grid grid-cols-1 md:grid-cols-2">
-            <HomeWorkHistory />
-          </div>
-        </div>
-      </ContentWrapper>
 
       <div className="mt-8 overflow-hidden sm:mt-12">
         <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4">
           <HomeImages />
         </div>
       </div>
+      <ContentWrapper>
+        <div className="mt-8 sm:mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            <HomeWorkHistory />
+          </div>
+        </div>
+      </ContentWrapper>
     </main>
   );
 };

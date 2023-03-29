@@ -24,9 +24,9 @@
   main,
   footer {
     /* @apply bg-white; */
-    @apply text-zinc-600;
+    @apply text-zinc-700;
     /* @apply dark:bg-zinc-900; */
-    @apply dark:text-zinc-200;
+    @apply dark:text-zinc-100;
   }
 
   main {

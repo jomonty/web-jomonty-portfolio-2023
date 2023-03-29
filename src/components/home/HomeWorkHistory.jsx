@@ -1,25 +1,39 @@
+import { Book } from "react-feather";
+
 import HomeContent from "../../constants/HomeContent.js";
 
 const HomeWorkHistory = () => {
   const WorkHistory = () =>
     HomeContent.workHistory.map((company, index) => {
       return (
-        <li
-          key={index}
-          className="flex w-[95%] place-items-center gap-4 rounded-2xl border py-1 px-4"
-        >
-          <img src="/logo-low-trans-svg.svg" className="relative h-10" />
-          <div className="flex flex-col justify-around text-left">
-            <p className="font-bold">{company.company}</p>
-            <p className="text-xs">{company.role}</p>
-            <p className="text-xs">{company.dates}</p>
+        <li key={index} className="w-[100%] rounded-2xl px-2 pt-1 pb-2 ">
+          <div className="flex w-[100%] place-items-center gap-4">
+            <div className="relative flex h-full items-center justify-center rounded-full bg-zinc-200 p-1 dark:bg-zinc-700">
+              <img
+                src={company.logo}
+                className="h-10 w-12 rounded-full bg-white"
+              />
+            </div>
+            <div className="flex w-[100%] flex-col justify-around gap-1">
+              <p className="text-sm font-bold tracking-wider">
+                {company.company}
+              </p>
+              <div className="flex justify-between text-xs text-zinc-700 dark:text-zinc-300">
+                <p className="tracking-wide">{company.role}</p>
+                <p className="">{company.dates}</p>
+              </div>
+            </div>
           </div>
         </li>
       );
     });
   return (
-    <div className="max-w-sm rounded-2xl border p-3">
-      <ul className="flex flex-col items-center gap-4 px-2">
+    <div className="max-w-sm rounded-2xl bg-zinc-50 p-3 ring-1 ring-zinc-100 dark:bg-zinc-800/50 dark:ring-zinc-300/20">
+      <div className="flex justify-start gap-4 pt-2 pb-5">
+        <Book color="var(--color-logoprimary)" />
+        <h2 className="font-bold tracking-wide">Work History</h2>
+      </div>
+      <ul className="flex flex-col items-center gap-4 px-1">
         <WorkHistory />
       </ul>
     </div>

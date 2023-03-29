@@ -5,24 +5,28 @@ const HomeContent = {
   ],
   workHistory: [
     {
-      company: "Cotswold Outdoors",
-      role: "Supervisor",
-      dates: "2013 - September 2017",
-    },
-    {
-      company: "Together Energy",
-      role: "Trading Director",
-      dates: "September 2017 - April 2022",
+      company: "CodeClan",
+      role: "Junior Developer",
+      dates: "Nov 2022 - Mar 2023",
+      logo: "/company-images/codeclan-logo.png",
     },
     {
       company: "Clyde Ventures",
       role: "Commercial Director",
-      dates: "April 2022 - November 2022",
+      dates: "Apr 2022 - Nov 2022",
+      logo: "/company-images/clyde-ventures-logo.png",
     },
     {
-      company: "CodeClan",
-      role: "Junior Software Developer",
-      dates: "November 2022 - March 2023",
+      company: "Together Energy",
+      role: "Trading Director",
+      dates: "Sep 2017 - Apr 2022",
+      logo: "/company-images/together-energy-logo.png",
+    },
+    {
+      company: "Cotswold Outdoors",
+      role: "Supervisor",
+      dates: "2013 - Sep 2017",
+      logo: "/company-images/cotswold-outdoor-logo.png",
     },
   ],
 };
