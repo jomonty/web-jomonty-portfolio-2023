@@ -3,7 +3,6 @@ import HomeContent from "../constants/HomeContent.js";
 import ContentWrapper from "./ContentWrapper.jsx";
 
 import HomeImages from "../components/home/HomeImages.jsx";
-import HomeWorkHistory from "../components/home/HomeWorkHistory.jsx";
 
 const Home = () => {
   const HomeContactLinks = () =>
