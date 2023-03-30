@@ -1,6 +1,7 @@
 import ContentWrapper from "./ContentWrapper.jsx";
 import AboutContent from "../constants/AboutContent.js";
 import ContactLinks from "../components/ContactLinks.jsx";
+import AboutWorkHistory from "../components/about/AboutWorkHistory.jsx";
 
 const About = () => {
   const AboutContactLinks = () =>
@@ -15,9 +16,6 @@ const About = () => {
             target="_blank"
             rel="noreferrer"
             className="flex justify-start py-3 hover:text-logoprimary"
-            // onClick={() => {
-            //   closePopoverNav();
-            // }}
           >
             <span className="flex  gap-8">
               {link.svg}
@@ -40,15 +38,10 @@ const About = () => {
       <ContentWrapper>
         <div className="mt-6">
           <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
-            <div className="lg:ml-20">
-              <div className="flex max-w-xs px-2.5 lg:max-w-none">
-                <img
-                  src="/logo-low-trans-svg.svg"
-                  className="aspect-square rounded-xl object-cover md:rounded-2xl"
-                />
-              </div>
+            <div className="flex justify-center lg:mt-20 lg:ml-20">
+              <AboutWorkHistory />
             </div>
-            <div className="lg:order-first lg:row-span-2">
+            <div className="order-first lg:row-span-2">
               <h1 className="text-3xl font-extrabold sm:text-4xl md:text-5xl">
                 {AboutContent.title}
               </h1>

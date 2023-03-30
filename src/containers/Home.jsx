@@ -43,13 +43,6 @@ const Home = () => {
           <HomeImages />
         </div>
       </div>
-      <ContentWrapper>
-        <div className="mt-8 sm:mt-12">
-          <div className="grid grid-cols-1 md:grid-cols-2">
-            <HomeWorkHistory />
-          </div>
-        </div>
-      </ContentWrapper>
     </main>
   );
 };

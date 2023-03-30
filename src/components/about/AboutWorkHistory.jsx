@@ -2,7 +2,7 @@ import { Book, ChevronRight } from "react-feather";
 
 import HomeContent from "../../constants/HomeContent.js";
 
-const HomeWorkHistory = () => {
+const AboutWorkHistory = () => {
   const WorkHistory = () =>
     HomeContent.workHistory.map((company, index) => {
       return (
@@ -29,7 +29,7 @@ const HomeWorkHistory = () => {
       );
     });
   return (
-    <div className="max-w-sm rounded-2xl bg-zinc-50 p-2 pb-6 ring-1 ring-zinc-100 dark:bg-zinc-800/50 dark:ring-zinc-300/20">
+    <div className="flex w-full flex-col rounded-2xl bg-zinc-50 p-2 pb-6 ring-1 ring-zinc-100 dark:bg-zinc-800/50 dark:ring-zinc-300/20 lg:w-[80%]">
       <div className="flex justify-start gap-4 pt-2 pb-5">
         <Book color="var(--color-logoprimary)" />
         <h2 className="font-bold tracking-wide">Work History</h2>
@@ -41,4 +41,4 @@ const HomeWorkHistory = () => {
   );
 };
 
-export default HomeWorkHistory;
+export default AboutWorkHistory;
