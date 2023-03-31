@@ -1,4 +1,4 @@
-import { GitHub, Linkedin, Link } from "react-feather";
+import { GitHub, Linkedin, Link, BookOpen } from "react-feather";
 
 const StyledLink = ({ url, displayText, showText }) => {
   const chooseLink = (text) => {

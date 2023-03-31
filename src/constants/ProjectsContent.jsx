@@ -51,6 +51,7 @@ const Projects = {
       image: "/portfolio-images/beeCareful_1.png",
       short_description:
         "Apiary management system, ExpressJS & MongoDB back-end, React front-end.",
+      related_article_id: 2,
       tech: ["javascript", "react", "express", "mongodb", "html5", "css3"].map(
         (tech) => {
           return Tech.find((element) => element.name === tech);
@@ -69,6 +70,7 @@ const Projects = {
       image: "/portfolio-images/the_little_gym_1.png",
       short_description:
         "Simple gym management system, built with Python/Flask.",
+      related_article_id: 3,
       tech: ["python", "flask", "postgresql", "html5", "css3"].map((tech) => {
         return Tech.find((element) => element.name === tech);
       }),
