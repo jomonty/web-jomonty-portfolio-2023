@@ -33,7 +33,7 @@ const ArticlesContent = [
         url_display: "GitHub",
       },
       {
-        url: "https://www.joinpickup.com",
+        url: "https://www.joinpickup.co",
         url_display: "joinpickup.co",
       },
       {
