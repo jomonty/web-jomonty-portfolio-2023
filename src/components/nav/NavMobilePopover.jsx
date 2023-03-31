@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { X } from "react-feather";
 import NavLinks from "../../constants/NavLinks.js";
-import ContactLinks from "../ContactLinks.jsx";
+import ContactLinks from "../../constants/ContactLinks.jsx";
 
 const NavMobilePopover = ({ navPopoverOpen, closePopoverNav, darkMode }) => {
   const PopoverNavLinks = () =>

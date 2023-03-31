@@ -1,19 +1,15 @@
 import { BookOpen, GitHub, Link } from "react-feather";
 
+import StyledLink from "../StyledlLink.jsx";
+
 const ProjectSummaryCard = ({ project }) => {
-  const StyledLink = ({ link, displayText, children }) => {
+  const ProjectStyledLink = ({ link, displayText, children }) => {
     return (
       <p className="z-10 mt-3 flex text-sm tracking-wide ">
         <div className="text-logoprimary hover:font-bold hover:text-logoprimary sm:text-logosecondary">
-          <a
-            href={link}
-            target="_blank"
-            rel="noreferrer"
-            className="flex gap-x-4 rounded-xl px-3 py-2 transition hover:bg-zinc-100  hover:dark:bg-zinc-800 "
-          >
-            <span>{children}</span>
-            <span>{displayText}</span>
-          </a>
+          <StyledLink url={link} displayText={displayText}>
+            {children}
+          </StyledLink>
         </div>
       </p>
     );
@@ -32,13 +28,13 @@ const ProjectSummaryCard = ({ project }) => {
       {/* <StyledLink link="" displayText="Blog">
         <BookOpen size={20} />
       </StyledLink> */}
-      <StyledLink link={project.github} displayText="GitHub">
+      <ProjectStyledLink link={project.github} displayText="GitHub">
         <GitHub size={20} />
-      </StyledLink>
+      </ProjectStyledLink>
       {project.hosted ? (
-        <StyledLink link={project.url} displayText={project.url_display}>
+        <ProjectStyledLink link={project.url} displayText={project.url_display}>
           <Link size={20} />
-        </StyledLink>
+        </ProjectStyledLink>
       ) : null}
     </div>
   );

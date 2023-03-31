@@ -6,6 +6,7 @@ import Home from "./containers/Home";
 import About from "./containers/About";
 import Projects from "./containers/Projects";
 import Tech from "./containers/Tech";
+import Articles from "./containers/Articles";
 
 function App() {
   const [navPopoverOpen, setNavPopoverOpen] = useState();
@@ -55,6 +56,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/tech" element={<Tech />} />
+        <Route path="/articles/:id" element={<Articles />} />
       </Routes>
       <Footer />
     </Router>
