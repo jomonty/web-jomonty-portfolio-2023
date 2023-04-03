@@ -1,8 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import ContentWrapper from "./ContentWrapper.jsx";
-import ProjectsContent from "../constants/ProjectsContent.jsx";
-// import ProjectSingle from "../components/ProjectSingle";
+import { ProjectsContent } from "../constants/ProjectsContent.js";
 import ProjectSummaryGrid from "../components/projects/ProjectSummaryGrid.jsx";
 
 const Projects = () => {
@@ -16,9 +15,6 @@ const Projects = () => {
   const handleClick = (id) => {
     setSelectedProjectId(id);
   };
-  // useEffect(() => {
-  //   console.log(selectedProjectId);
-  // }, [selectedProjectId]);
 
   const ProjectsContentText = () =>
     ProjectsContent.text.map((paragraph, index) => {
@@ -36,7 +32,6 @@ const Projects = () => {
           <h1 className="text-3xl font-extrabold sm:text-4xl md:text-5xl">
             {ProjectsContent.title}
           </h1>
-          {/* <p className="pt-8 text-base tracking-wider">Coming soon...</p> */}
           <ProjectsContentText />
         </div>
         <div className="mt-10 sm:mt-12">

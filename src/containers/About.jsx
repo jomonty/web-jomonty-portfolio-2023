@@ -1,6 +1,6 @@
 import ContentWrapper from "./ContentWrapper.jsx";
-import AboutContent from "../constants/AboutContent.js";
-import ContactLinks from "../constants/ContactLinks.jsx";
+import { AboutContent } from "../constants/AboutContent.js";
+import { ContactLinks } from "../constants/ContactLinks.jsx";
 import AboutWorkHistory from "../components/about/AboutWorkHistory.jsx";
 import StyledLinkList from "../components/StyledLinkList.jsx";
 

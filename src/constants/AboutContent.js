@@ -1,4 +1,4 @@
-const AboutContent = {
+export const AboutContent = {
   title:
     "I'm Josh Montgomery. A full-stack software developer based in Glasgow.",
   text: [
@@ -9,4 +9,4 @@ const AboutContent = {
   ],
 };
 
-export default AboutContent;
+// export default AboutContent;

@@ -1,4 +1,4 @@
-const ArticlesContent = [
+export const ArticlesContent = [
   {
     id: 0,
     active: false,
@@ -94,5 +94,3 @@ const ArticlesContent = [
     ],
   },
 ];
-
-export default ArticlesContent;

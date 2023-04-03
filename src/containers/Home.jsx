@@ -1,4 +1,4 @@
-import ContactLinks from "../constants/ContactLinks.jsx";
+import { ContactLinks } from "../constants/ContactLinks.jsx";
 import HomeContent from "../constants/HomeContent.js";
 import ContentWrapper from "./ContentWrapper.jsx";
 

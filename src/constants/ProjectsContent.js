@@ -1,6 +1,4 @@
-import Tech from "./Tech";
-
-const Projects = {
+export const ProjectsContent = {
   title: "Stuff I've made on my journey so far.",
   text: [
     "I've made tons of little scripts and projects while I've been learning, as well as some larger projects to learn something specific. The below is a small selection of my better work,  more are available on my GitHub.",
@@ -17,9 +15,7 @@ const Projects = {
       image: "",
       short_description: "",
       related_article_id: 0,
-      tech: [].map((tech) => {
-        return Tech.find((element) => element.name === tech);
-      }),
+      tech: [],
     },
     {
       id: 1,
@@ -33,11 +29,7 @@ const Projects = {
       short_description:
         "Community based litter picking app, Java/Spring & PostgreSQL back-end, React front-end.",
       related_article_id: 1,
-      tech: ["java", "spring", "javascript", "react", "html5", "css3"].map(
-        (tech) => {
-          return Tech.find((element) => element.name === tech);
-        }
-      ),
+      tech: ["java", "spring", "javascript", "react", "html5", "css3"],
     },
 
     {
@@ -52,11 +44,7 @@ const Projects = {
       short_description:
         "Apiary management system, ExpressJS & MongoDB back-end, React front-end.",
       related_article_id: 2,
-      tech: ["javascript", "react", "express", "mongodb", "html5", "css3"].map(
-        (tech) => {
-          return Tech.find((element) => element.name === tech);
-        }
-      ),
+      tech: ["javascript", "react", "express", "mongodb", "html5", "css3"],
     },
 
     {
@@ -71,11 +59,9 @@ const Projects = {
       short_description:
         "Simple gym management system, built with Python/Flask.",
       related_article_id: 3,
-      tech: ["python", "flask", "postgresql", "html5", "css3"].map((tech) => {
-        return Tech.find((element) => element.name === tech);
-      }),
+      tech: ["python", "flask", "postgresql", "html5", "css3"],
     },
   ],
 };
 
-export default Projects;
+// export default Projects;

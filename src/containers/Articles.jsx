@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import ContentWrapper from "./ContentWrapper.jsx";
-import ArticlesContent from "../constants/ArticlesContent.jsx";
+import { ArticlesContent } from "../constants/ArticlesContent.js";
 import StyledLinkList from "../components/StyledLinkList.jsx";
 
 const Articles = () => {
