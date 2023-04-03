@@ -25,7 +25,7 @@ const About = () => {
               <AboutContentText />
             </div>
             <div className="flex justify-center lg:mt-20 lg:ml-20">
-              <AboutWorkHistory />
+              <AboutWorkHistory workHistory={AboutContent.workHistory} />
             </div>
             <div className="lg:ml-20">
               <StyledLinkList links={ContactLinks} />
