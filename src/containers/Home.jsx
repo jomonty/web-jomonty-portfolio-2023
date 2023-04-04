@@ -38,7 +38,7 @@ const Home = () => {
       </ContentWrapper>
 
       <div className="mt-8 overflow-hidden sm:mt-12">
-        <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4">
+        <div className=" flex justify-center gap-5 overflow-hidden py-4">
           <HomeImages />
         </div>
       </div>

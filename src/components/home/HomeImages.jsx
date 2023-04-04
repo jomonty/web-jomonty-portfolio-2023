@@ -1,21 +1,21 @@
 const HomeImages = () => {
   const imageSources = [
-    "/sample-home-image-1.jpg",
-    "/sample-home-image-2.jpg",
-    "/sample-home-image-3.jpg",
-    "/sample-home-image-4.jpg",
-    "/sample-home-image-5.jpg",
+    "/home-image-1.webp",
+    "/home-image-2.webp",
+    "/home-image-3.webp",
+    "/home-image-4.webp",
+    "/home-image-5.webp",
   ];
 
   return imageSources.map((source, index) => {
     return (
       <div
         key={index}
-        className="relative aspect-square w-44 flex-none overflow-hidden rounded-xl object-cover sm:w-72 sm:rounded-2xl"
+        className="relative w-44 flex-none overflow-hidden rounded-xl sm:w-72 sm:rounded-2xl"
       >
         <img
           src={source}
-          className={`h-full w-full ${
+          className={`object-scale-down ${
             index % 2 === 0 ? "rotate-1" : "-rotate-1"
           }`}
         />
