@@ -51,12 +51,50 @@ export const ArticlesContent = [
   },
   {
     id: 2,
+    active: false,
+    title: "Go & React CRM Demo",
+    date: "13/04/2023",
+    summary:
+      "Full-Stack CRM demo, built to introduce myself to Go and Bootstrap.",
+    related_project_id: 2,
+    images: [""],
+    links: [
+      {
+        url: "https://github.com/jomonty/go-el3-full-stack-demo",
+        url_display: "GitHub",
+      },
+    ],
+    content: [
+      "A full stack lightweight CRM, with JWT based authentication, full CRUD functionality with MySQL for persistence, file upload and download capability and styled using Bootstrap5.",
+      "I really enjoyed making this. I was looking for a way to push myself beyond what I've achived in past work and I was curious about Go, so I was super excited to get started.",
+      "Not having used Go before, I started off with tutorials covering each of the main features I wanted the app to have (RESTful API, ORM, authentication etc), and built mini-projects for each one before planning out and building out the functionality, consolidating and continuing to learn as I went.",
+      "On the front end, I've been trying to get exposure to as many CSS frameworks as possible so it was great to get a chance to use Bootstrap. Honestly, I found it a little fiddly to begin with, having just spent some time using TailwindCSS, but I quickly found that once I got familiar with the components it is really quick to get things running with.",
+    ],
+  },
+  {
+    id: 3,
+    active: false,
+    title: "",
+    date: "",
+    summary: "",
+    related_project_id: 0,
+    images: [""],
+    links: [
+      {
+        url: "",
+        url_display: "",
+      },
+    ],
+    content: [""],
+  },
+  {
+    id: 4,
     active: true,
     title: "beeCareful",
     date: "08/02/2023",
     summary:
       "Apiary management system, ExpressJS & MongoDB back-end, React front-end.",
-    related_project_id: 2,
+    related_project_id: 4,
     images: ["/article-images/beeCareful_1.png"],
     links: [
       {
@@ -72,13 +110,14 @@ export const ArticlesContent = [
       "Full details of the project and my team are available on the GitHub repo's README.",
     ],
   },
+
   {
-    id: 3,
+    id: 5,
     active: true,
     title: "The Little Gym",
     date: "14/12/2022",
     summary: "Simple gym management system, built with Python/Flask.",
-    related_project_id: 3,
+    related_project_id: 5,
     images: ["/article-images/the_little_gym_1.png"],
     links: [
       {
