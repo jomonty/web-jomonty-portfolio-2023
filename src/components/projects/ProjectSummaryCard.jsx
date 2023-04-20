@@ -27,11 +27,11 @@ const ProjectSummaryCard = ({ project }) => {
       <p className="z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
         {project.short_description}
       </p>
-      <div className="z-10 flex flex-col justify-around">
+      <div className="z-10 mt-2 flex  flex-col justify-around pt-3">
         {project.related_article ? (
           <Link
             to={`/articles/${project.related_article_id}`}
-            className="mt-2 p-3 font-semibold tracking-wider text-logoprimary hover:text-logoprimary sm:text-logosecondary"
+            className="px-3 pb-2 font-semibold tracking-wider text-logoprimary hover:text-logoprimary sm:text-logosecondary"
           >
             Blog
           </Link>
