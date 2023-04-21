@@ -57,7 +57,7 @@ export const ArticlesContent = [
     summary:
       "Full-Stack CRM demo, built to introduce myself to Go and Bootstrap.",
     related_project_id: 2,
-    images: [""],
+    images: ["/article-images/go_react_crm_1.png"],
     links: [
       {
         url: "https://github.com/jomonty/go-el3-full-stack-demo",

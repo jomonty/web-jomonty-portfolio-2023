@@ -1,10 +1,10 @@
 const HomeImages = () => {
   const imageSources = [
-    "/home-image-1.webp",
-    "/home-image-2.webp",
-    "/home-image-3.webp",
-    "/home-image-4.webp",
-    "/home-image-5.webp",
+    "/home-images/home-image-1.webp",
+    "/home-images/home-image-2.webp",
+    "/home-images/home-image-3.webp",
+    "/home-images/home-image-4.webp",
+    "/home-images/home-image-5.webp",
   ];
 
   return imageSources.map((source, index) => {
