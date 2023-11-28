@@ -33,10 +33,6 @@ export const ArticlesContent = [
         url_display: "GitHub",
       },
       {
-        url: "https://www.joinpickup.co",
-        url_display: "joinpickup.co",
-      },
-      {
         url: "https://app.swaggerhub.com/apis/jomonty_cs_swagger/pickup_v2/1.0.0",
         url_display: "pickup API docs - SwaggerHub",
       },

@@ -23,9 +23,9 @@ export const ProjectsContent = {
       active: true,
       name: "pickup",
       github: "https://github.com/kelsiesmurphy/pickup",
-      hosted: true,
-      url: "https://www.joinpickup.co",
-      url_display: "joinpickup.co",
+      hosted: false,
+      url: "",
+      url_display: "",
       image: "/portfolio-images/pickup_1.png",
       short_description:
         "Community based litter picking app, Java/Spring & PostgreSQL back-end, React front-end.",
