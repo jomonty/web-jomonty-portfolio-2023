@@ -23,7 +23,7 @@ export const ProjectsContent = {
       active: true,
       name: "pickup",
       github: "https://github.com/kelsiesmurphy/pickup",
-      hosted: true,
+      hosted: false,
       url: "",
       url_display: "",
       image: "/portfolio-images/pickup_1.png",
